@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rent a car calculator</title>
+  </head>
+  <body>
+    <div class="fill"></div>
+    <div class="container">
+      <form action="#" class="form form1">
+        <div class="form__item">
+          <h2 class="heading">Choose your tariff</h2>
+          <ul class="switcher">
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="tariff"
+                id="economy"
+                class="tariff"
+                value="economy"
+              />
+              <label for="economy">Economy</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="tariff"
+                id="comfort"
+                class="tariff"
+                value="comfort"
+                checked="checked"
+              />
+              <label for="comfort">Comfort</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="tariff"
+                id="business"
+                class="tariff"
+                value="business"
+              />
+              <label for="business">Business</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="tariff"
+                id="premium"
+                class="tariff"
+                value="premium"
+              />
+              <label for="premium">Premium</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">For how many hours we rent (at least 2 hours)</h2>
+          <div class="slider">
+            <input
+              type="range"
+              name="time"
+              id="time"
+              step="1"
+              min="2"
+              max="96"
+              value="2"
+            />
+            <output id="volume" for="time">2</output>
+          </div>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Additional Options</h2>
+          <div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option1"
+                id="option1"
+                class="option"
+              />
+              <label for="option1" class="checkmark"></label>
+              <label for="option1">Collection is further 15 km from the city</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option2"
+                id="option2"
+                class="option"
+              />
+              <label for="option2" class="checkmark"></label>
+              <label for="option2">Child safety seat with fasteners</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option3"
+                id="option3"
+                class="option"
+              />
+              <label for="option3" class="checkmark"></label>
+              <label for="option3">A set of wedding decorations</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option4"
+                id="option4"
+                class="option"
+              />
+              <label for="option4" class="checkmark"></label>
+              <label for="option4">Additional insurance</label>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form action="#" class="form form2">
+        <div class="form__item">
+          <h2 class="heading">Your order</h2>
+          <div class="order">
+            <span>Tariff:</span>
+            <output id="order_tariff">—</output>
+          </div>
+          <div class="order">
+            <span>The rental period:</span>
+            <output id="order_time">—</output>
+          </div>
+          <div class="order">
+            <span>Additionally:</span>
+            <output id="order_option">—</output>
+          </div>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">The total cost of the trip</h2>
+          <output class="total" id="total">0</output>
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
